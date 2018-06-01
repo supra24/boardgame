@@ -19,6 +19,6 @@ public class TriggerDirection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        transform.parent.GetComponentInParent<SpaceManager>().OnTriggerEnter(direction, other);
+        transform.parent.GetComponentInParent<SpaceManager>().OnTrigger(direction, other);
     }
 }

@@ -25,21 +25,21 @@ public class SpaceManager : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter(Direction direction, Collider other)
+    public void OnTrigger(Direction direction, Collider other)
     {
         switch (direction)
         {
             case Direction.NORTH:
-                spaceNorth = other.gameObject;
+                spaceNorth = other.transform.parent.parent.gameObject;
                 break;
             case Direction.SOUTH:
-                spaceSouth = other.gameObject;
+                spaceSouth = other.transform.parent.parent.gameObject;
                 break;
             case Direction.EAST:
-                spaceEast = other.gameObject;
+                spaceEast = other.transform.parent.parent.gameObject;
                 break;
             case Direction.WEST:
-                spaceWest = other.gameObject;
+                spaceWest = other.transform.parent.parent.gameObject;
                 break;
         }
     }
