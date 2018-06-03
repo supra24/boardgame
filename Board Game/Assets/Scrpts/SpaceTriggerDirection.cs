@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerDirection : MonoBehaviour
+public class SpaceTriggerDirection : MonoBehaviour
 {
 
     public Direction direction;
@@ -19,6 +19,6 @@ public class TriggerDirection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        transform.parent.GetComponentInParent<SpaceManager>().OnTrigger(direction, other);
+            transform.parent.GetComponentInParent<SpaceManager>().OnTrigger(direction, other);
     }
 }

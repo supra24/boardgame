@@ -5,10 +5,10 @@ using UnityEngine;
 public class SpaceManager : MonoBehaviour
 {
 
-    public FunctionalityOfTheDirection north { get; set; }
-    public FunctionalityOfTheDirection south { get; set; }
-    public FunctionalityOfTheDirection east { get; set; }
-    public FunctionalityOfTheDirection west { get; set; }
+    public FunctionalityOfTheDirection north;
+    public FunctionalityOfTheDirection south;
+    public FunctionalityOfTheDirection east;
+    public FunctionalityOfTheDirection west;
 
     public GameObject spaceNorth, spaceSouth, spaceEast, spaceWest;
 
@@ -40,6 +40,25 @@ public class SpaceManager : MonoBehaviour
                 break;
             case Direction.WEST:
                 spaceWest = other.transform.parent.parent.gameObject;
+                break;
+        }
+    }
+
+    public void OnTrigger(Direction direction, FunctionalityOfTheDirection functionalityOfTheDirection)
+    {
+        switch (direction)
+        {
+            case Direction.NORTH:
+                north = functionalityOfTheDirection;
+                break;
+            case Direction.SOUTH:
+                south = functionalityOfTheDirection;
+                break;
+            case Direction.EAST:
+                east = functionalityOfTheDirection;
+                break;
+            case Direction.WEST:
+                west = functionalityOfTheDirection;
                 break;
         }
     }
