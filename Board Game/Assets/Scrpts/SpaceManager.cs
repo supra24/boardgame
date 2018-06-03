@@ -5,19 +5,15 @@ using UnityEngine;
 public class SpaceManager : MonoBehaviour
 {
 
-    public FunctionalityOfTheDirection north;
-    public FunctionalityOfTheDirection south;
-    public FunctionalityOfTheDirection east;
-    public FunctionalityOfTheDirection west;
+    public FunctionalityOfTheDirection north = FunctionalityOfTheDirection.NULL;
+    public FunctionalityOfTheDirection south = FunctionalityOfTheDirection.NULL;
+    public FunctionalityOfTheDirection east = FunctionalityOfTheDirection.NULL;
+    public FunctionalityOfTheDirection west = FunctionalityOfTheDirection.NULL;
 
     public GameObject spaceNorth, spaceSouth, spaceEast, spaceWest;
 
     void Start()
     {
-        north = FunctionalityOfTheDirection.NULL;
-        south = FunctionalityOfTheDirection.NULL;
-        east = FunctionalityOfTheDirection.NULL;
-        west = FunctionalityOfTheDirection.NULL;
     }
 
     void Update()
@@ -25,21 +21,21 @@ public class SpaceManager : MonoBehaviour
 
     }
 
-    public void OnTrigger(Direction direction, Collider other)
+    public void OnTrigger(Direction direction, GameObject other)
     {
         switch (direction)
         {
             case Direction.NORTH:
-                spaceNorth = other.transform.parent.parent.gameObject;
+                spaceNorth = other;
                 break;
             case Direction.SOUTH:
-                spaceSouth = other.transform.parent.parent.gameObject;
+                spaceSouth = other;
                 break;
             case Direction.EAST:
-                spaceEast = other.transform.parent.parent.gameObject;
+                spaceEast = other;
                 break;
             case Direction.WEST:
-                spaceWest = other.transform.parent.parent.gameObject;
+                spaceWest = other;
                 break;
         }
     }
