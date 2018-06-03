@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum FunctionalityOfTheDirection {
   
+    NULL,
     OPEN,
-    CLOSE,
-    NULL
+    CLOSE
 };

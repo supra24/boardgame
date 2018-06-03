@@ -12,6 +12,8 @@ public class SpaceManager : MonoBehaviour
 
     public GameObject spaceNorth, spaceSouth, spaceEast, spaceWest;
 
+    private bool choice = false;
+
     void Start()
     {
     }
@@ -57,5 +59,23 @@ public class SpaceManager : MonoBehaviour
                 west = functionalityOfTheDirection;
                 break;
         }
+    }
+
+    public void SetChoiceOfDirection(bool isChoice)
+    {
+        GameObject gameObject = transform.GetChild(3).gameObject;
+        gameObject.SetActive(isChoice);
+        choice = isChoice;
+    }
+
+    public void OnMouseUpAsButtonParent()
+    {
+        if (choice)
+            isChoice();
+    }
+
+    public void isChoice()
+    {
+
     }
 }
