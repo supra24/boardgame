@@ -39,6 +39,8 @@ public class SpaceManager : MonoBehaviour
             case Direction.WEST:
                 spaceWest = other;
                 break;
+            case Direction.NULL:
+                break;
         }
     }
 
@@ -57,6 +59,8 @@ public class SpaceManager : MonoBehaviour
                 break;
             case Direction.WEST:
                 west = functionalityOfTheDirection;
+                break;
+            case Direction.NULL:
                 break;
         }
     }

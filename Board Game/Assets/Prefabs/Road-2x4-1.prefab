@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ed957baf19a2e48a2198ce011b6548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 0
+  direction: 1
   functionalityOfTheDirection: 2
 --- !u!114 &114306798494145786
 MonoBehaviour:
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ed957baf19a2e48a2198ce011b6548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 1
+  direction: 2
   functionalityOfTheDirection: 1
 --- !u!114 &114500079135026422
 MonoBehaviour:
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ed957baf19a2e48a2198ce011b6548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 3
+  direction: 4
   functionalityOfTheDirection: 1
 --- !u!114 &114828614946627776
 MonoBehaviour:
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ed957baf19a2e48a2198ce011b6548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 2
+  direction: 3
   functionalityOfTheDirection: 2
 --- !u!212 &212165520769881128
 SpriteRenderer:

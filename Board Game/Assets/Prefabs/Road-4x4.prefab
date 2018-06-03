@@ -451,8 +451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ed957baf19a2e48a2198ce011b6548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 2
-  functionalityOfTheDirection: 0
+  direction: 3
+  functionalityOfTheDirection: 1
 --- !u!114 &114117838363995638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -464,8 +464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ed957baf19a2e48a2198ce011b6548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 0
-  functionalityOfTheDirection: 0
+  direction: 1
+  functionalityOfTheDirection: 1
 --- !u!114 &114757521224283952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,8 +477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ed957baf19a2e48a2198ce011b6548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 3
-  functionalityOfTheDirection: 0
+  direction: 4
+  functionalityOfTheDirection: 1
 --- !u!114 &114977568167085036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,8 +490,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ed957baf19a2e48a2198ce011b6548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 1
-  functionalityOfTheDirection: 0
+  direction: 2
+  functionalityOfTheDirection: 1
 --- !u!212 &212487469905526552
 SpriteRenderer:
   m_ObjectHideFlags: 1

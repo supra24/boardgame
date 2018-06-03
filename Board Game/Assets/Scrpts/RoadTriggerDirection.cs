@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class RoadTriggerDirection : MonoBehaviour
 {
-
-    public Direction direction;
     public FunctionalityOfTheDirection functionalityOfTheDirection;
 
     // Use this for initialization
