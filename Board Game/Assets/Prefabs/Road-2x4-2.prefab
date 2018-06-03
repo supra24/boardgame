@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
-  functionalityOfTheDirection: 1
+  functionalityOfTheDirection: 2
 --- !u!114 &114054613607633402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  functionalityOfTheDirection: 0
+  functionalityOfTheDirection: 1
 --- !u!114 &114684176326527658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
-  functionalityOfTheDirection: 1
+  functionalityOfTheDirection: 2
 --- !u!114 &114814785172313334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  functionalityOfTheDirection: 0
+  functionalityOfTheDirection: 1
 --- !u!212 &212274201576480448
 SpriteRenderer:
   m_ObjectHideFlags: 1
