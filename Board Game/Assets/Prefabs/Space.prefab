@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 114198159824192086}
   - component: {fileID: 54318564732691346}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: MouseTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
