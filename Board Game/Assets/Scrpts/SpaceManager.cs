@@ -70,6 +70,7 @@ public class SpaceManager : MonoBehaviour
         GameObject gameObject = transform.GetChild(3).gameObject;
         gameObject.SetActive(isChoice);
         choice = isChoice;
+        CameraController.RunToMainPosition();
     }
 
     public void OnMouseUpAsButtonParent()
@@ -81,5 +82,12 @@ public class SpaceManager : MonoBehaviour
     public void isChoice()
     {
 
+
+        SpaceManager[] spaces = transform.parent.GetComponentsInChildren<SpaceManager>();
+
+        foreach (SpaceManager space in spaces)
+        {
+            space.gameObject.transform.GetChild(3).gameObject.SetActive(false);
+        }
     }
 }

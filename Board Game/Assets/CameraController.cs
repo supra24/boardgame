@@ -13,8 +13,8 @@ public class CameraController : MonoBehaviour {
     /*
      * Main object for rotation (X and Y)
      */
-    public GameObject cameraX;
-    public GameObject cameraY;
+    public static GameObject cameraX;
+    public static GameObject cameraY;
 
     /*
      * variable for user rotation
@@ -25,22 +25,29 @@ public class CameraController : MonoBehaviour {
     /*
      * save parameters
      */
-    private Vector3 cameraPosition;
+    private static Vector3 cameraPosition;
     private float fieldOfViewCamera;
 
     /*
      * Static variale for camera
      */
     public static bool canRotate = true;
+    public static bool canRotateX = true;
+    public static bool canRotateY = true;
 
     /*
      * Others parameters
      */
-    private bool runToMainPosition = false;
-    private bool runToSpacePosition = false;
+    private static bool runToMainPosition = false;
+    private static bool runToSpacePosition = false;
+
+    static float t = 0.0f;
 
     // Use this for initialization
     void Start () {
+
+        cameraX = transform.parent.gameObject;
+        cameraY = cameraX.transform.parent.gameObject;
 
         cameraPosition = cameraY.transform.localPosition;
         fieldOfViewCamera = Camera.main.fieldOfView;
@@ -66,8 +73,11 @@ public class CameraController : MonoBehaviour {
             Vector3 posX = Camera.main.ScreenToViewportPoint((Input.mousePosition - dragStart) * dragSpeedX);
             Vector3 moveX = new Vector3(-posX.y, 0, 0);
 
-            cameraY.transform.Rotate(moveY);
-            cameraX.transform.Rotate(moveX);
+            if (canRotateY)
+                cameraY.transform.Rotate(moveY);
+
+            if (canRotateX)
+                cameraX.transform.Rotate(moveX);
 
             LimitRotatiion();
         }
@@ -89,16 +99,39 @@ public class CameraController : MonoBehaviour {
     {
         if (runToMainPosition)
         {
+            cameraX.transform.localEulerAngles = new Vector3(Mathf.Lerp(cameraX.transform.localEulerAngles.x, cameraPosition.x, t), 0, 0);
 
-        } 
+            t += 0.5f * Time.deltaTime;
+            if (t > 1.0f)
+            {
+                runToSpacePosition = false;
+                t = 0.0f;
+            }
+        }
         else if (runToSpacePosition)
         {
+            cameraX.transform.localEulerAngles = new Vector3(Mathf.Lerp(cameraX.transform.localEulerAngles.x, 90, t), 0, 0);
 
+            t += 0.5f * Time.deltaTime;
+            if (t > 1.0f)
+            {
+                runToSpacePosition = false;
+                t = 0.0f;
+            }
         }
     }
 
-    public void RunToMainPosition()
+    public static void RunToMainPosition()
     {
         runToMainPosition = true;
+    }
+
+    public static void RunToSpacePosition()
+    {
+        canRotate = true;
+        canRotateX = false;
+        canRotateY = true;
+        cameraPosition = new Vector3(cameraX.transform.localEulerAngles.x, cameraY.transform.localEulerAngles.y, 0);
+        runToSpacePosition = true;
     }
 }
