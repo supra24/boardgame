@@ -16,14 +16,4 @@ public class MapController : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    public void clickStartButton()
-    {
-        CameraController.RunToSpacePosition();
-        
-        foreach(SpaceManager space in spaces)
-        {
-            space.gameObject.transform.GetChild(3).gameObject.SetActive(true);
-        }
-    }
 }

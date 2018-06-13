@@ -104,11 +104,14 @@ public class CameraController : MonoBehaviour {
             t += 0.5f * Time.deltaTime;
             if (t > 1.0f)
             {
-                runToSpacePosition = false;
+                runToMainPosition = false;
+                canRotate = true;
+                canRotateX = true;
+                canRotateY = true;
                 t = 0.0f;
             }
         }
-        else if (runToSpacePosition)
+        if (runToSpacePosition)
         {
             cameraX.transform.localEulerAngles = new Vector3(Mathf.Lerp(cameraX.transform.localEulerAngles.x, 90, t), 0, 0);
 
@@ -116,6 +119,9 @@ public class CameraController : MonoBehaviour {
             if (t > 1.0f)
             {
                 runToSpacePosition = false;
+                canRotate = true;
+                canRotateX = false;
+                canRotateY = true;
                 t = 0.0f;
             }
         }
@@ -123,14 +129,12 @@ public class CameraController : MonoBehaviour {
 
     public static void RunToMainPosition()
     {
+
         runToMainPosition = true;
     }
 
     public static void RunToSpacePosition()
     {
-        canRotate = true;
-        canRotateX = false;
-        canRotateY = true;
         cameraPosition = new Vector3(cameraX.transform.localEulerAngles.x, cameraY.transform.localEulerAngles.y, 0);
         runToSpacePosition = true;
     }

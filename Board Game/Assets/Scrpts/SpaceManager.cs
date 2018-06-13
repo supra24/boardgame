@@ -65,29 +65,40 @@ public class SpaceManager : MonoBehaviour
         }
     }
 
-    public void SetChoiceOfDirection(bool isChoice)
-    {
-        GameObject gameObject = transform.GetChild(3).gameObject;
-        gameObject.SetActive(isChoice);
-        choice = isChoice;
-        CameraController.RunToMainPosition();
-    }
+    //    public void SetChoiceOfDirection(bool isChoice)
+    //  {
+    //    GameObject gameObject = transform.GetChild(3).gameObject;
+    //  gameObject.SetActive(isChoice);
+    //  choice = isChoice;
+    //CameraController.RunToMainPosition();
+    //}
 
     public void OnMouseUpAsButtonParent()
     {
-        if (choice)
-            isChoice();
+        switch (SharedData.actions)
+        {
+            case Actions.NULL:
+                break;
+            case Actions.START:
+                isChoiceStart();
+                break;
+        }
     }
 
-    public void isChoice()
+    private void isChoiceStart()
     {
-
-
         SpaceManager[] spaces = transform.parent.GetComponentsInChildren<SpaceManager>();
 
         foreach (SpaceManager space in spaces)
         {
             space.gameObject.transform.GetChild(3).gameObject.SetActive(false);
         }
+
+        GameObject spacecraft = Resources.Load("Prefabs/Spacecraft") as GameObject;
+        GameObject instantiate = Instantiate(spacecraft, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+        instantiate.transform.parent = GameObject.Find("Road").gameObject.transform;
+
+        CameraController.RunToMainPosition();
+
     }
 }
