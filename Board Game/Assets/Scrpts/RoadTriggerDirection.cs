@@ -20,6 +20,6 @@ public class RoadTriggerDirection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.transform.parent.GetComponentInParent<SpaceManager>().OnTrigger(other.GetComponent<SpaceTriggerDirection>().direction, functionalityOfTheDirection);
+            other.transform.parent.GetComponentInParent<SpaceManager>().OnTrigger(other.GetComponent<SpaceTriggerDirection>().direction, functionalityOfTheDirection);
     }
 }

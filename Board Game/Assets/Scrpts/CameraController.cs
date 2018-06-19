@@ -129,13 +129,15 @@ public class CameraController : MonoBehaviour {
 
     public static void RunToMainPosition()
     {
-
+        runToSpacePosition = false;
         runToMainPosition = true;
+ 
     }
 
     public static void RunToSpacePosition()
     {
         cameraPosition = new Vector3(cameraX.transform.localEulerAngles.x, cameraY.transform.localEulerAngles.y, 0);
+        runToMainPosition = false;
         runToSpacePosition = true;
     }
 }

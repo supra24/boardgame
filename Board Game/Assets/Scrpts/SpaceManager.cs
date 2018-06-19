@@ -14,6 +14,8 @@ public class SpaceManager : MonoBehaviour
 
     private bool choice = false;
 
+    public bool isUsed = false;
+
     void Start()
     {
     }
@@ -46,6 +48,8 @@ public class SpaceManager : MonoBehaviour
 
     public void OnTrigger(Direction direction, FunctionalityOfTheDirection functionalityOfTheDirection)
     {
+        isUsed = true;
+
         switch (direction)
         {
             case Direction.NORTH:

@@ -19,7 +19,7 @@ public class SpaceTriggerDirection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.parent.parent.name.Contains("Space"))
+        if (!other.transform.parent.parent.name.Contains("Spacecraft"))
             transform.parent.GetComponentInParent<SpaceManager>().OnTrigger(direction, other.transform.parent.parent.gameObject);
     }
 }
