@@ -4,16 +4,33 @@ using UnityEngine;
 
 public class SpaceManager : MonoBehaviour
 {
+    /*
+     * IDs 
+     */
+    public int idX, idZ;
 
+    /*
+     * funkcjonalność stron po dodaniu drogi
+     */
     public FunctionalityOfTheDirection north = FunctionalityOfTheDirection.NULL;
     public FunctionalityOfTheDirection south = FunctionalityOfTheDirection.NULL;
     public FunctionalityOfTheDirection east = FunctionalityOfTheDirection.NULL;
     public FunctionalityOfTheDirection west = FunctionalityOfTheDirection.NULL;
 
+    /*
+     * obiekty znajdujące się na 4 stronach tego miejsca
+     */
     public GameObject spaceNorth, spaceSouth, spaceEast, spaceWest;
 
-    private bool choice = false;
+    /*
+     * ilosć ludzi na jednym miejscu
+     */
+     
 
+    /*
+     * Inne
+     */
+    private bool choice = false;
     public bool isUsed = false;
 
     void Start()
