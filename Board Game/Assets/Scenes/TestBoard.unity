@@ -5648,11 +5648,10 @@ Prefab:
       propertyPath: m_Name
       value: Space (112)
       objectReference: {fileID: 0}
-    - target: {fileID: 23626541866830766, guid: c401be9ec9fbf334d8771ecfd4581777,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 44856ab7f4d0fa94380bbcd42a45641a, type: 2}
+    - target: {fileID: 1222998223774468, guid: c401be9ec9fbf334d8771ecfd4581777, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c401be9ec9fbf334d8771ecfd4581777, type: 2}
   m_IsPrefabParent: 0
