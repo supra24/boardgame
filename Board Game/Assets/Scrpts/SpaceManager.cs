@@ -122,4 +122,9 @@ public class SpaceManager : MonoBehaviour
         CameraController.RunToMainPosition();
 
     }
+
+    public void Create()
+    {
+
+    }
 }

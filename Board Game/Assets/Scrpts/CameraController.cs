@@ -36,6 +36,10 @@ public class CameraController : MonoBehaviour {
     public static bool canRotateY = true;
 
     /*
+     * CLick position
+     */
+
+    /*
      * Others parameters
      */
     private static bool runToMainPosition = false;
