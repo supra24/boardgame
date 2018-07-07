@@ -123,7 +123,7 @@ public class SpaceManager : MonoBehaviour
 
     }
 
-    public void Create()
+    public void  Create()
     {
 
     }
