@@ -25,7 +25,9 @@ public class SpaceManager : MonoBehaviour
     /*
      * ilosć ludzi na jednym miejscu
      */
-     
+    public int numberOfSoldiers;
+    public int numberOfVillagers;
+    public int numberOfTechnicians;
 
     /*
      * Inne
